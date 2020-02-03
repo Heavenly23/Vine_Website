@@ -1,0 +1,16 @@
+{% extends 'vine/base.html' %}
+{% load vine_videoExtra %}
+{% block body %}
+
+<div class="selectedVine">
+<iframe style="margin-top:50px;" width="700" height="400" src="{{ vine.video.url }}"
+           frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h5> {{ vine }} <img src = "{{ vine.country.flag }}" width="20" height="12"/> ({{ vine.country.name}})</h5>
+<h6> {{ vine.date }}</h6>
+<h5>
+    <pre><a style="text-decoration:none;" href="{% url 'Vine:vine_detail' vine.album.id vine.id %}"> <i  class="fa fa-thumbs-o-up" onclick = "{% add_like vine request.user %}"></i> 0  <i class="fa fa-thumbs-o-down" onclick="{% add_dislike vine request.user %}"></i> 0 </a></pre></h5>
+
+</div>
+<hr>
+{% endblock %}
