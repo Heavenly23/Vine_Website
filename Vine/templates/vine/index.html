@@ -13,13 +13,14 @@
         <h3> No result found <i class="fa fa-frown-o" aria-hidden="true"></i></h3>
       {% endif %}
     {% endif %}
+
     {% if all_albums %}
 {% for album in all_albums %}
 <li><a href ="{% url 'Vine:detail' album.id %}">
 
-    <img id="theImage"  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:320px;height:320px;">
+    <img id="theImage"  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:235px;height:235px;">
 
-    <p  id="theInfo" style="width:320px;height:30px;"> {{ album }}  </p>  </a></li>
+    <p  id="theInfo" style="width:235px;height:30px;"> {{ album }}  </p>  </a></li>
 {% endfor %}
     {% endif %}
 

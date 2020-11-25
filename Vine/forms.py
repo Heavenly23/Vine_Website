@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 from . models import Vine,VineAlbum
 
+
 class VineAlbum_form(forms.ModelForm):
 
     class Meta:
@@ -17,7 +18,7 @@ class Vine_form(forms.ModelForm):
         fields = ['vine_title','language','country','video']
 
 class UserForm(forms.ModelForm):
-    about_me= forms.CharField(widget=forms.Textarea)
+    about_me= forms.CharField(widget=forms.Textarea(attrs={'rows': 6, 'cols': 26}))
     password = forms.CharField(widget=forms.PasswordInput)
 
     class Meta:

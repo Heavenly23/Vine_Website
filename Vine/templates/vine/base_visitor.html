@@ -17,7 +17,8 @@
 <body >
      <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="padding:0px;padding-left:20px;">
          <!--logo-->
-         <a href="{% url 'Vine:index' %}" class="navbar-brand ">  <i class="fa fa-vine"></i>INE </a>
+         <a href="{% url 'Vine:index' %}" class="navbar-brand ">
+             <i class="fa fa-vine"></i>ine</a>
 
          <!--toggle button-->
          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="mainNavBar">
@@ -28,9 +29,9 @@
          <!-- menu items-->
          <div class="collapse navbar-collapse" id="mainNavBar">
          <ul class="navbar-nav mr-auto">
-             <li class="nav-item active"><a class="nav-link" href="{% url 'Vine:index' %}" ><i class="fa fa-film"> </i>
+             <li class="nav-item active"><a class="nav-link" href="{% url 'Vine:login' %}"  ><i class="fa fa-film"> </i>
                  Albums</a> </li>
-             <li class="nav-item"><a class="nav-link" href="{% url 'Vine:vine_index' %}"> <i class="fa fa-vine"> </i>
+             <li class="nav-item"><a class="nav-link" href="{% url 'Vine:login' %}"  > <i class="fa fa-vine"> </i>
                  Vines</a> </li>
 
              <!-- search bar -->
@@ -44,8 +45,8 @@
 
              <!-- right align -->
          <ul class="nav navbar-nav navbar-right">
-           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:create-account' %}"><i class="fa fa-user-plus"></i> Sign-up</a></li>
-           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:login' %}"><i class="fa fa-sign-in"></i> Sign-in</a></li>
+           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:create-account' %}"><i class="fa fa-user-plus"></i> sign-up</a></li>
+           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:login' %}"><i class="fa fa-sign-in"></i> sign-in</a></li>
        </ul>
        </div>
          </div>
@@ -53,18 +54,28 @@
 
 
      </nav>
+
      <div class="container" >
-         {% block body %}
-{% for album in all_albums %}
+
+  {% block body %}
 <ul class="album">
-<li><a href ="{% url 'Vine:detail' album.id %}"
-       id="{{ forloop.counter }}" >
 
-    <img  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:300px;height:300px;">
+    {% if not all_albums  %}
+      {% if not all_vines  %}
 
-    <p   style="width:300px;height:30px;"> {{ album }}  </p>  </a> </li>
+        <h3> No result found <i class="fa fa-frown-o" aria-hidden="true"></i></h3>
+      {% endif %}
+    {% endif %}
+
+    {% if all_albums %}
+{% for album in all_albums %}
+<li><a href="{% url 'Vine:login' %}" >
+
+    <img id="theImage"  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:235px;height:235px;">
+
+    <p  id="theInfo" style="width:235px;height:30px;"> {{ album }}  </p>  </a></li>
 {% endfor %}
-</ul>
+    {% endif %}
 
 {% endblock%}
      </div>
