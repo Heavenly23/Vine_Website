@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('vine/', include('Vine.urls')),
+    path('', include('Vine.urls')),
 
 ]
 
