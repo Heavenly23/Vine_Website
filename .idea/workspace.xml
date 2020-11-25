@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19b452ec-f164-465c-923e-a0fc52901ed0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
