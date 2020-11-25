@@ -53,12 +53,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Merry\Desktop\Vine_website\Vine\static\vine" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Merry\Desktop\Vine_website\Vine\static\vine\images" />
       <recent name="C:\Users\Merry\Desktop\Vine_website\Vine\templates\vine" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Merry\Desktop\Vine_website\Vine\static\vine" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -90,10 +90,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606335008766">
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606344139746">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1606335008766" />
+    <state x="401" y="143" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1606344139746" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1606245345792">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
