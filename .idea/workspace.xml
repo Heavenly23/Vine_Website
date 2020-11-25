@@ -20,38 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19b452ec-f164-465c-923e-a0fc52901ed0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Vine_website/storage_backends.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/static/vine/images/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/static/vine/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/base_visitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/base_visitor.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/myVines.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/myVines.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vine_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vine_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vine_index_notLoggedIn.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_index_notLoggedIn.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/FILIZ_0OMn7Fk.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Filiz__Barıs__In_Love_DlcRzZJ.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/Kemal_ve_Nihan____Kara_Sevda____HUMOR.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/a_thousand_years_-_ross__rachel.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/friends.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/nihan_0kXiQXU.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/oth.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/playful_kiss_gFxevi0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/videoplayback_rYZNdTA.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/y2mate.com_-_digale_traduao_dtRDNB0cVDY_360p.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/y2mate.com_-_fmv_playful_kiss_just_the_way_you_are_SwJ4pDBwex4_360p.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/y2mate.com_-_one_tree_hill_dare_you_to_move_5TaWzeM14lc_720p.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
