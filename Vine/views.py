@@ -75,7 +75,7 @@ def CreateVineAlbum(request):
            # userprofile.add_album(album)
             all_albums = VineAlbum.objects.filter(profile=userprofile)
             return render(request, 'vine/myAlbums.html', {'all_albums':  all_albums})
-    return render(request, 'vine/vineAlbum_form.html',{'form':form})
+    return render(request, 'vine/vinealbum_form.html',{'form':form})
 
 class UpdateVineAlbum(generic.UpdateView):
     model = VineAlbum
