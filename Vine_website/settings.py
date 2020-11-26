@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'Vine.apps.VineConfig',
+    'vine.apps.VineConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'languages',

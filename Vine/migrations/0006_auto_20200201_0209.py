@@ -7,17 +7,17 @@ import django_mysql.models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Vine', '0005_auto_20200201_0202'),
+        ('vine', '0005_auto_20200201_0202'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='Vine',
+            model_name='vine',
             name='dislikes',
             field=django_mysql.models.ListCharField(models.CharField(max_length=100), default=[], max_length=66, size=None),
         ),
         migrations.AlterField(
-            model_name='Vine',
+            model_name='vine',
             name='likes',
             field=django_mysql.models.ListCharField(models.CharField(max_length=100), default=[], max_length=66, size=None),
         ),
