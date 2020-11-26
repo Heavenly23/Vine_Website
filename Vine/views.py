@@ -15,7 +15,7 @@ from django.contrib.auth.models import User
 # Create your views here.
 '''
 class IndexView(generic.ListView):
-    template_name = 'vine/base_visitor.html'
+    template_name = 'Vine/base_visitor.html'
     context_object_name = 'all_albums'
 
     def get_queryset(self):
@@ -24,12 +24,12 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     context_object_name = 'album'
     model = VineAlbum
-    template_name = 'vine/details.html'
+    template_name = 'Vine/details.html'
 '''
 
 def IndexView(request):
     if not request.user.is_authenticated:
-        return render(request, 'vine/base_visitor.html', {'all_albums': VineAlbum.objects.all()})
+        return render(request, 'Vine/base_visitor.html', {'all_albums': VineAlbum.objects.all()})
     else:
         albums = VineAlbum.objects.all()
         vines = Vine.objects.all()
@@ -41,27 +41,27 @@ def IndexView(request):
             vines_selected = vines.filter(
                 Q(vine_title__icontains=query) | Q(country__icontains=query) | Q(language__icontains=query)
             ).distinct()
-            return render(request, 'vine/index.html', {'all_albums': albums_selected,'all_vines': vines_selected})
+            return render(request, 'Vine/index.html', {'all_albums': albums_selected,'all_vines': vines_selected})
         else:
             print(VineAlbum.objects.all())
-            return render(request, 'vine/index.html', {'all_albums': VineAlbum.objects.all().reverse().reverse() })
+            return render(request, 'Vine/index.html', {'all_albums': VineAlbum.objects.all().reverse().reverse() })
 
 def DetailView(request,album_id):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     selected_album = get_object_or_404(VineAlbum, pk=album_id)
-    return render(request, 'vine/details.html', {'album': selected_album})
+    return render(request, 'Vine/details.html', {'album': selected_album})
 
 def DetailView_vine(request,album_id,vine_id):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     selected_vine = get_object_or_404(Vine, pk=vine_id)
-    return render(request,'vine/vine_details.html',{'vine': selected_vine})
+    return render(request,'Vine/vine_details.html',{'Vine': selected_vine})
 
 def vine_Index(request):
     if not request.user.is_authenticated:
-        return render(request, 'vine/vine_index_notLoggedIn.html', {'all_vines': Vine.objects.all()})
-    return render(request, 'vine/vine_index.html', {'all_vines': Vine.objects.all()})
+        return render(request, 'Vine/vine_index_notLoggedIn.html', {'all_vines': Vine.objects.all()})
+    return render(request, 'Vine/vine_index.html', {'all_vines': Vine.objects.all()})
 
 def CreateVineAlbum(request):
     form = VineAlbum_form(request.POST or None, request.FILES or None)
@@ -74,8 +74,8 @@ def CreateVineAlbum(request):
             album.save()
            # userprofile.add_album(album)
             all_albums = VineAlbum.objects.filter(profile=userprofile)
-            return render(request, 'vine/myAlbums.html', {'all_albums':  all_albums})
-    return render(request, 'vine/vineAlbum_form.html',{'form':form})
+            return render(request, 'Vine/myAlbums.html', {'all_albums':  all_albums})
+    return render(request, 'Vine/vineAlbum_form.html',{'form':form})
 
 class UpdateVineAlbum(generic.UpdateView):
     model = VineAlbum
@@ -85,13 +85,13 @@ class UpdateVineAlbum(generic.UpdateView):
 
 def DeleteVineAlbum(request,album_id):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     album = get_object_or_404(VineAlbum, pk=album_id)
     userprofile = request.user.profile
     #userprofile.delete_album(album)
     album.delete()
     all_albums = VineAlbum.objects.filter(profile=userprofile)
-    return render(request, 'vine/myAlbums.html', {'all_albums': all_albums})
+    return render(request, 'Vine/myAlbums.html', {'all_albums': all_albums})
 
 
 def CreateVine(request,album_id):
@@ -104,9 +104,9 @@ def CreateVine(request,album_id):
             vine.album = album
             vine.video = request.FILES['video']
             vine.save()
-            #userprofile.add_vine(album.title,vine)
-            return render(request, 'vine/myVines.html', {'album': album})
-    return render(request, 'vine/vine_form.html', {'form': form})
+            #userprofile.add_vine(album.title,Vine)
+            return render(request, 'Vine/myVines.html', {'album': album})
+    return render(request, 'Vine/vine_form.html', {'form': form})
 
 
 class UpdateVine(generic.UpdateView):
@@ -116,27 +116,27 @@ class UpdateVine(generic.UpdateView):
 
 def DeleteVine(request,album_id,vine_id):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     album = get_object_or_404(VineAlbum, pk=album_id)
     vine =  album.vine_set.get(pk=vine_id)
     userprofile = request.user.profile
     vine.delete()
-    return render(request, 'vine/myVines.html', {'album': album})
+    return render(request, 'Vine/myVines.html', {'album': album})
 
 
 def myAlbum(request):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     userprofile = request.user.profile
     all_albums= VineAlbum.objects.filter(profile = userprofile)
-    return render(request, 'vine/myAlbums.html', {'all_albums':  all_albums})
+    return render(request, 'Vine/myAlbums.html', {'all_albums':  all_albums})
 
 def myVines(request,album_id):
     if not request.user.is_authenticated:
-        return render(request, 'vine/login.html')
+        return render(request, 'Vine/login.html')
     userprofile = request.user.profile
     album = get_object_or_404(VineAlbum, pk=album_id)
-    return render(request, 'vine/myVines.html', {'album':  album})
+    return render(request, 'Vine/myVines.html', {'album':  album})
 
 def register(request):
     form = UserForm(request.POST or None)
@@ -156,13 +156,13 @@ def register(request):
                 profile.save()
                 if user.is_active:
                     login(request, user)
-                    #return render(request, 'vine/index.html', {'all_albums': VineAlbum.objects.all()})
+                    #return render(request, 'Vine/index.html', {'all_albums': VineAlbum.objects.all()})
                     return HttpResponseRedirect(reverse('Vine:index'))
-    return render(request, 'vine/register.html', {'form': form})
+    return render(request, 'Vine/register.html', {'form': form})
 
 def logout_user(request):
     logout(request)
-    return render(request, 'vine/base_visitor.html',  {'all_albums': VineAlbum.objects.all()})
+    return render(request, 'Vine/base_visitor.html',  {'all_albums': VineAlbum.objects.all()})
 
 def login_user(request):
     form = Login(request.POST or None)
@@ -173,12 +173,12 @@ def login_user(request):
         if user_to is not None:
             if user_to.is_active:
                 login(request, user_to)
-                #return render(request, 'vine/index.html', {'all_albums': VineAlbum.objects.all()})
+                #return render(request, 'Vine/index.html', {'all_albums': VineAlbum.objects.all()})
                 return redirect(reverse('Vine:index'))
         else:
-            return render(request, 'vine/login.html', {'error_message': 'Invalid login'})
-    return render(request, 'vine/login.html', {'form': form})
+            return render(request, 'Vine/login.html', {'error_message': 'Invalid login'})
+    return render(request, 'Vine/login.html', {'form': form})
 
 def profile(request):
     user = request.user.profile
-    render(request,'vine/profile.html')
+    render(request,'Vine/profile.html')

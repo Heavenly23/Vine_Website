@@ -11,19 +11,19 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.RemoveField(
-            model_name='vine',
+            model_name='Vine',
             name='dislikes',
         ),
         migrations.RemoveField(
-            model_name='vine',
+            model_name='Vine',
             name='isDisLiked',
         ),
         migrations.RemoveField(
-            model_name='vine',
+            model_name='Vine',
             name='isLiked',
         ),
         migrations.RemoveField(
-            model_name='vine',
+            model_name='Vine',
             name='likes',
         ),
     ]

@@ -11,12 +11,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='vine',
+            model_name='Vine',
             name='dislikes',
             field=models.IntegerField(default=0),
         ),
         migrations.AddField(
-            model_name='vine',
+            model_name='Vine',
             name='likes',
             field=models.IntegerField(default=0),
         ),

@@ -12,12 +12,12 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.AddField(
-            model_name='vine',
+            model_name='Vine',
             name='dislikes',
             field=django_mysql.models.ListCharField(models.CharField(max_length=100), default='None2', max_length=66, size=None),
         ),
         migrations.AddField(
-            model_name='vine',
+            model_name='Vine',
             name='likes',
             field=django_mysql.models.ListCharField(models.CharField(max_length=100), default='None', max_length=66, size=None),
         ),
