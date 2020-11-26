@@ -60,7 +60,7 @@ def DetailView_vine(request,album_id,vine_id):
 
 def vine_Index(request):
     if not request.user.is_authenticated:
-        return render(request, 'vine/vine_index_notLoggedIn.html', {'all_vines': Vine.objects.all()})
+        return render(request, 'vine/login.html')
     return render(request, 'vine/vine_index.html', {'all_vines': Vine.objects.all()})
 
 def CreateVineAlbum(request):
