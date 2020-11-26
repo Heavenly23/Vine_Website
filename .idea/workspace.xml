@@ -20,14 +20,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19b452ec-f164-465c-923e-a0fc52901ed0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_update_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/static/vine/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/static/vine/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_update_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vineAlbum_update_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vine_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0007_auto_20201125_1601.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/migrations/0007_auto_20201125_1601.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vineAlbum_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vineAlbum_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine_website/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0002_auto_20200121_1755.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0003_auto_20200127_0424.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0004_auto_20200131_0259.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0005_auto_20200201_0202.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0006_auto_20200201_0209.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0007_auto_20201125_1601.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/static/vine/images/back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/static/vine/images/clipart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/static/vine/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/Setting.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/base_visitor.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/form-template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/myAlbums.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/myVines.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/profile.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vineAlbum_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templates/vine/vine_index_notLoggedIn.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templatetags/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/templatetags/vine_videoExtra.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/storage_backends.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine_website/Vine_website/wsgi.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +82,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Vine_website" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1W3JWfYto46FwPHMvxMKXeAi4y9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />

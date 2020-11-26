@@ -18,7 +18,9 @@ urlpatterns = [
               # vine/album/add
               path('album/add/', views.CreateVineAlbum, name='album-add'),
 
-              path('album/<int:pk>/update/', views.UpdateVineAlbum.as_view(), name='album-update'),
+    # path('album/<int:pk>/update/', views.UpdateVineAlbum.as_view(), name='album-update'),
+
+      path('album/<int:pk>/update/', views.UpdateAlbum, name='album-update'),
 
               path('album/<int:album_id>/delete/', views.DeleteVineAlbum, name='album-delete'),
 
@@ -29,7 +31,9 @@ urlpatterns = [
 
               path('my_album/<int:album_id>/vines/',views.myVines, name='my-vine'),
 
-              path('my_album/<int:album_id>/update/<int:pk>/',views.UpdateVine.as_view(), name='vine-update'),
+    #path('my_album/<int:album_id>/update/<int:pk>/',views.UpdateVine.as_view(), name='vine-update'),
+
+     path('my_album/<int:album_id>/update/<int:pk>/',views.UpdateVine, name='vine-update'),
 
               path('my_album/<int:album_id>/delete/<int:vine_id>/',views.DeleteVine, name='vine-delete'),
 

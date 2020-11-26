@@ -2,12 +2,11 @@
 
 
 {% block body %}
-
 <div class="row">
-    <div class="col-6 col-md-7">
+    <div class="col-7 col-sm-10">
         <div class="panel panel-default bg-dark">
-            <div class="panel-body" style="margin-top:15px;padding:20px;">
-                <p  style="color:#5cb85c;font-size:20px;"> Edit Album </p>
+            <div class="panel-body" style="margin-top:15px;margin-right:400px;padding:20px;">
+                 <p  style="color:#5cb85c;font-size:20px;"> Edit Vine </p>
                 <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
                   {% csrf_token %}
                     {% include 'vine/form-template.html' %}

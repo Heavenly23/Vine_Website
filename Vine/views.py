@@ -77,11 +77,24 @@ def CreateVineAlbum(request):
             return render(request, 'vine/myAlbums.html', {'all_albums':  all_albums})
     return render(request, 'vine/vineAlbum_form.html',{'form':form})
 
-class UpdateVineAlbum(generic.UpdateView):
-    model = VineAlbum
-    fields = ['artist', 'title', 'genre', 'vine_logo']
-    #template_name_suffix = '_update_form'
-    success_url = reverse_lazy('Vine:my-album')
+# class UpdateVineAlbum(generic.UpdateView):
+#     model = VineAlbum
+#     fields = ['artist', 'title', 'genre', 'vine_logo']
+#     #template_name_suffix = '_update_form'
+#     success_url = reverse_lazy('Vine:my-album')
+
+def UpdateAlbum(request,pk):
+    album = VineAlbum.objects.get(id=pk)
+    form = VineAlbum_form(instance=album)
+    if(request.method == 'POST'):
+        form = VineAlbum_form(request.POST or None, request.FILES or None, instance=album)
+        if form.is_valid():
+            form.save()
+            userprofile = request.user.profile
+            all_albums = VineAlbum.objects.filter(profile=userprofile)
+            return render(request, 'vine/myAlbums.html', {'all_albums': all_albums})
+    context = {'form': form}
+    return render(request,'vine/vineAlbum_update_form.html',context)
 
 def DeleteVineAlbum(request,album_id):
     if not request.user.is_authenticated:
@@ -108,11 +121,25 @@ def CreateVine(request,album_id):
             return render(request, 'vine/myVines.html', {'album': album})
     return render(request, 'vine/vine_form.html', {'form': form})
 
+def UpdateVine(request,album_id,pk):
+    album = VineAlbum.objects.get(id=album_id)
+    vine = get_object_or_404(Vine, pk=pk)
+    form = Vine_form(instance=vine)
+    if(request.method == 'POST'):
+        form = Vine_form(request.POST or None, request.FILES or None, instance=vine)
+        if form.is_valid():
+            form.save()
+            userprofile = request.user.profile
+            album = get_object_or_404(VineAlbum, pk=album_id)
+            return render(request, 'vine/myVines.html', {'album': album})
+    context = {'form': form}
+    return render(request,'vine/vine_update_form.html',context)
 
-class UpdateVine(generic.UpdateView):
-    model = Vine
-    fields = ['vine_title','album','language','country','video']
-    success_url = reverse_lazy('Vine:my-album')
+# class UpdateVine(generic.UpdateView):
+#     model = Vine
+#     fields = ['vine_title','album','language','country','video']
+#     success_url = reverse_lazy('Vine:my-album')
+
 
 def DeleteVine(request,album_id,vine_id):
     if not request.user.is_authenticated:
