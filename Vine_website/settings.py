@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'vine.apps.VineConfig',
+    'Vine.apps.VineConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'languages',
@@ -62,9 +62,7 @@ ROOT_URLCONF = 'Vine_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR,'Templates'),
-        ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,12 +134,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # Other context processors would go here
 'adcode.context_processors.current_placements',
 )
-
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
 #S3 BUCKETS CONFIG
+#AWS config information is hidden
+# You may run the project on your local machine
+
 AWS_ACCESS_KEY_ID = 'AKIA4KSLSMBSZEYTAAHB'
 AWS_SECRET_ACCESS_KEY = '2UBzsVHGKHUvVmqE3h1dfP46rkf30hc+pyLoU4aN'
 AWS_STORAGE_BUCKET_NAME = 'myvine'
-
 
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None

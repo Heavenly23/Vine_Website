@@ -1,0 +1,25 @@
+
+{% extends 'vine/base.html' %}
+
+
+{% block body %}
+<a class="btn btn-success" style="margin-top:10px;"  href="{% url 'Vine:album-add' %}"><i class="fa fa-plus"></i> Add Album </a></p>
+{% for album in all_albums %}
+<ul class="album">
+<li><a href ="{% url 'Vine:my-vine' album.id %}">
+
+    <img  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:300px;height:310px;">
+
+    <p style="width:300px;height:30px;"> {{ album }}  </p>  </a>
+
+    <form action="{% url 'Vine:album-delete' album.id %}" method="post" >
+    <p>    <a class="btn btn-success" href="{% url 'Vine:album-update' album.id %}"> Edit </a>
+        {% csrf_token %}<Button class="btn btn-danger"> Delete </Button> </p>
+    </form>
+
+</li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}

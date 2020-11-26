@@ -26,7 +26,7 @@ class VineAlbum(models.Model):
     vine_logo = models.FileField()
 
     def get_absolute_url(self):
-        return reverse('vine:detail', kwargs={'pk': self.pk})
+        return reverse('Vine:detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title + ' - ' + self.artist

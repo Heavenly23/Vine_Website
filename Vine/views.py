@@ -81,7 +81,7 @@ class UpdateVineAlbum(generic.UpdateView):
     model = VineAlbum
     fields = ['artist', 'title', 'genre', 'vine_logo']
     #template_name_suffix = '_update_form'
-    success_url = reverse_lazy('vine:my-album')
+    success_url = reverse_lazy('Vine:my-album')
 
 def DeleteVineAlbum(request,album_id):
     if not request.user.is_authenticated:
@@ -112,7 +112,7 @@ def CreateVine(request,album_id):
 class UpdateVine(generic.UpdateView):
     model = Vine
     fields = ['vine_title','album','language','country','video']
-    success_url = reverse_lazy('vine:my-album')
+    success_url = reverse_lazy('Vine:my-album')
 
 def DeleteVine(request,album_id,vine_id):
     if not request.user.is_authenticated:
@@ -157,7 +157,7 @@ def register(request):
                 if user.is_active:
                     login(request, user)
                     #return render(request, 'vine/index.html', {'all_albums': VineAlbum.objects.all()})
-                    return HttpResponseRedirect(reverse('vine:index'))
+                    return HttpResponseRedirect(reverse('Vine:index'))
     return render(request, 'vine/register.html', {'form': form})
 
 def logout_user(request):
@@ -174,7 +174,7 @@ def login_user(request):
             if user_to.is_active:
                 login(request, user_to)
                 #return render(request, 'vine/index.html', {'all_albums': VineAlbum.objects.all()})
-                return redirect(reverse('vine:index'))
+                return redirect(reverse('Vine:index'))
         else:
             return render(request, 'vine/login.html', {'error_message': 'Invalid login'})
     return render(request, 'vine/login.html', {'form': form})

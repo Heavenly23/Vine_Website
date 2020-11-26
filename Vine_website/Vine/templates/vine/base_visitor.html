@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% load static %}
+     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" type="text/css" href="{% static 'vine/style.css' %}"/>
+    <title>Vine</title>
+</head>
+<body >
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="padding:0px;padding-left:20px;">
+         <!--logo-->
+         <a href="{% url 'Vine:index' %}" class="navbar-brand ">
+             <i class="fa fa-vine"></i>ine</a>
+
+         <!--toggle button-->
+         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="mainNavBar">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+
+
+         <!-- menu items-->
+         <div class="collapse navbar-collapse" id="mainNavBar">
+         <ul class="navbar-nav mr-auto">
+             <li class="nav-item active"><a class="nav-link" href="{% url 'Vine:login' %}"  ><i class="fa fa-film"> </i>
+                 Albums</a> </li>
+             <li class="nav-item"><a class="nav-link" href="{% url 'Vine:login' %}"  > <i class="fa fa-vine"> </i>
+                 Vines</a> </li>
+
+             <!-- search bar -->
+             <li style="padding-left:20px;">
+             <form class="form-inline active-gray-3" >
+                   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+             </form>
+             </li>
+         </ul>
+
+             <!-- right align -->
+         <ul class="nav navbar-nav navbar-right">
+           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:create-account' %}"><i class="fa fa-user-plus"></i> sign-up</a></li>
+           <li class="nav-item"><a class="nav-link" href="{% url 'Vine:login' %}"><i class="fa fa-sign-in"></i> sign-in</a></li>
+       </ul>
+       </div>
+         </div>
+
+
+
+     </nav>
+
+     <div class="container" >
+
+  {% block body %}
+<ul class="album">
+
+    {% if not all_albums  %}
+      {% if not all_vines  %}
+
+        <h3> No result found <i class="fa fa-frown-o" aria-hidden="true"></i></h3>
+      {% endif %}
+    {% endif %}
+
+    {% if all_albums %}
+{% for album in all_albums %}
+<li><a href="{% url 'Vine:login' %}" >
+
+    <img id="theImage"  src="{{ album.vine_logo.url }}" class="img-fluid"  style="width:235px;height:235px;">
+
+    <p  id="theInfo" style="width:235px;height:30px;"> {{ album }}  </p>  </a></li>
+{% endfor %}
+    {% endif %}
+
+{% endblock%}
+     </div>
+<script type="text/javascript">
+  function changeDivContent(here){
+        var theImage =  document.getElementsByName('theImage');
+        var myImage =theImage[here];
+        myImage.style.height = '400px';
+        myImage.style.width = '400px';
+
+}
+  function change(here){
+      var theImage =  document.getElementsByName('theImage');
+      var myImage =theImage[here];
+      myImage.style.height = '260px';
+      myImage.style.width = '270px';
+
+
+
+  }
+
+
+
+</script>
+</body>
+</html>

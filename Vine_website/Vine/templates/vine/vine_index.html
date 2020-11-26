@@ -1,0 +1,17 @@
+
+{% extends 'vine/base.html' %}
+
+{% block body %}
+
+<ul class="album" style="margin-top:30px;">
+{% for vine in all_vines %}
+
+<li><a href="{% url 'Vine:vine_detail' vine.album.id vine.id %}" >
+   <iframe width="300" height="250" src="{{ vine.video.url }}"
+           frameborder="0" ></iframe>
+
+<p style="width:300px;height:30px;font-size:15px;">{{ vine }} <img src = "{{ vine.country.flag }}" width="20" height="12"/>
+</a></li>
+{% endfor %}
+</ul>
+{% endblock %} 
