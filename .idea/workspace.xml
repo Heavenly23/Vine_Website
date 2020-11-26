@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19b452ec-f164-465c-923e-a0fc52901ed0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Vine/templates/vine/vine_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/templates/vine/vine_details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/Vine/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/Vine/migrations/0007_auto_20201125_1601.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/Vine/migrations/0007_auto_20201125_1601.py" afterDir="false" />
@@ -44,7 +43,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Vine_website" />
   </component>
   <component name="ProjectId" id="1W3JWfYto46FwPHMvxMKXeAi4y9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
