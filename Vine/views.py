@@ -14,12 +14,12 @@ from .models import VineAlbum, Vine, Profile
 from django.db.models import Q
 from django.contrib.auth.models import User
 
-import boto
-from boto.s3.key import Key
-from django.conf import settings
-
-s3conn = boto.connect_s3(settings.AWS_ACCESS_KEY_ID,settings.AWS_SECRET_ACCESS_KEY)
-bucket = s3conn.get_bucket(settings.AWS_STORAGE_BUCKET_NAME)
+# import boto
+# from boto.s3.key import Key
+# from django.conf import settings
+#
+# s3conn = boto.connect_s3(settings.AWS_ACCESS_KEY_ID,settings.AWS_SECRET_ACCESS_KEY)
+# bucket = s3conn.get_bucket(settings.AWS_STORAGE_BUCKET_NAME)
 
 # Create your views here.
 '''
@@ -157,10 +157,10 @@ def DeleteVine(request,album_id,vine_id):
     album = get_object_or_404(VineAlbum, pk=album_id)
     vine =  album.vine_set.get(pk=vine_id)
     userprofile = request.user.profile
-    k = Key(bucket)
-    k.key = str(vine_id)
-    k.delete()
-    vine.delete()
+    # k = Key(bucket)
+    # k.key = str(vine_id)
+    # k.delete()
+    # vine.delete()
     return render(request, 'vine/myVines.html', {'album': album})
 
 
