@@ -9,7 +9,7 @@ body{
 }
 
 .album{
-    margin-top:50px;
+    margin-top:0px;
     padding:0px;
 
 }
@@ -38,8 +38,8 @@ body{
    margin-bottom:50px;
    float:left;
    /**background-color:#404040;**/
-   background-color:#292b2c;
-   padding:10px;
+   /**background-color:#292b2c;**/
+
    padding-bottom:0px;
 
 }
@@ -55,7 +55,7 @@ p{
 
  ul {
     list-style-type: none;
-    margin-left:3.5%;
+    margin-left:2.5%;
 }
 
 li a:hover {

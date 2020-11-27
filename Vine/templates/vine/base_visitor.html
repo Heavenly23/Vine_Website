@@ -56,10 +56,19 @@
 
      </nav>
 
-     <div class="container" >
+
 
   {% block body %}
-<ul class="album">
+
+<!--autoplay loop preload="auto" poster="clipart.png"-->
+
+        <video id="video" autoplay="autoplay" loop="loop" muted style="pointer-events:none;" width="100%" height="400">
+    <source src="{{ random.video.url }}" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+<div class="container" >
+<ul class="album" >
+
 
     {% if not all_albums  %}
       {% if not all_vines  %}
@@ -78,28 +87,8 @@
 {% endfor %}
     {% endif %}
 
-{% endblock%}
+    {% endblock%}</ul>
      </div>
-<script type="text/javascript">
-  function changeDivContent(here){
-        var theImage =  document.getElementsByName('theImage');
-        var myImage =theImage[here];
-        myImage.style.height = '400px';
-        myImage.style.width = '400px';
 
-}
-  function change(here){
-      var theImage =  document.getElementsByName('theImage');
-      var myImage =theImage[here];
-      myImage.style.height = '260px';
-      myImage.style.width = '270px';
-
-
-
-  }
-
-
-
-</script>
 </body>
 </html>

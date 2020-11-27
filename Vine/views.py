@@ -1,5 +1,6 @@
 from datetime import timezone
 from logging import log
+from random import choice
 
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponseRedirect
@@ -12,6 +13,14 @@ from .forms import UserForm, Login, VineAlbum_form, Vine_form
 from .models import VineAlbum, Vine, Profile
 from django.db.models import Q
 from django.contrib.auth.models import User
+
+import boto
+from boto.s3.key import Key
+from django.conf import settings
+
+s3conn = boto.connect_s3(settings.AWS_ACCESS_KEY_ID,settings.AWS_SECRET_ACCESS_KEY)
+bucket = s3conn.get_bucket(settings.AWS_STORAGE_BUCKET_NAME)
+
 # Create your views here.
 '''
 class IndexView(generic.ListView):
@@ -29,7 +38,8 @@ class DetailView(generic.DetailView):
 
 def IndexView(request):
     if not request.user.is_authenticated:
-        return render(request, 'vine/base_visitor.html', {'all_albums': VineAlbum.objects.all()})
+        random_obj = Vine.objects.latest('date')
+        return render(request, 'vine/base_visitor.html', {'all_albums': VineAlbum.objects.all(),'random':random_obj})
     else:
         albums = VineAlbum.objects.all()
         vines = Vine.objects.all()
@@ -147,6 +157,9 @@ def DeleteVine(request,album_id,vine_id):
     album = get_object_or_404(VineAlbum, pk=album_id)
     vine =  album.vine_set.get(pk=vine_id)
     userprofile = request.user.profile
+    k = Key(bucket)
+    k.key = str(vine_id)
+    k.delete()
     vine.delete()
     return render(request, 'vine/myVines.html', {'album': album})
 
@@ -189,7 +202,8 @@ def register(request):
 
 def logout_user(request):
     logout(request)
-    return render(request, 'vine/base_visitor.html',  {'all_albums': VineAlbum.objects.all()})
+    random_obj = Vine.objects.latest('date')
+    return render(request,'vine/base_visitor.html', {'all_albums': VineAlbum.objects.all(), 'random': random_obj})
 
 def login_user(request):
     form = Login(request.POST or None)
