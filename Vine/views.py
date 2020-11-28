@@ -160,7 +160,7 @@ def DeleteVine(request,album_id,vine_id):
     # k = Key(bucket)
     # k.key = str(vine_id)
     # k.delete()
-    # vine.delete()
+    vine.delete()
     return render(request, 'vine/myVines.html', {'album': album})
 
 
