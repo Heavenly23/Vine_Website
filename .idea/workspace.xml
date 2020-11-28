@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19b452ec-f164-465c-923e-a0fc52901ed0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Vine/static/vine/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/Vine/static/vine/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Vine_website/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/Vine/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Vine_website/Vine/admin.py" beforeDir="false" />
