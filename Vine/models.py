@@ -34,7 +34,8 @@ class VineAlbum(models.Model):
 class Vine(models.Model):
     album = models.ForeignKey(VineAlbum,on_delete=models.CASCADE)
     vine_title = models.CharField(max_length=100)
-    vine_poster= models.FileField()
+    #poster = "{{vine.vine_poster.url}}"
+    #vine_poster= models.FileField()
     video = models.FileField()
     country = CountryField(blank_label='Select Country',null=True)
     date = models.DateTimeField(auto_now_add=True)

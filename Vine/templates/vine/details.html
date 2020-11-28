@@ -7,7 +7,7 @@
 {% for vine in album.vine_set.all %}
 <ul class="vine" style="margin-top:30px;">
 <li><a href="{% url 'Vine:vine_detail' album.id vine.id %}" >
-   <video muted width="300px" height="250px" poster="{{vine.vine_poster.url}}"
+   <video muted width="300px" height="250px"
        id="video1" onmouseover="this.play()" onmouseout="this.pause()">
     <source src="{{ vine.video.url }}" type="video/mp4" />
             Your browser does not support the video tag.

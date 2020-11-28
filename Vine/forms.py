@@ -15,7 +15,7 @@ class Vine_form(forms.ModelForm):
 
     class Meta:
         model = Vine
-        fields = ['vine_title','language','country','vine_poster','video']
+        fields = ['vine_title','language','country','video']
 
 class UserForm(forms.ModelForm):
     about_me= forms.CharField(widget=forms.Textarea(attrs={'rows': 6, 'cols': 26}))
